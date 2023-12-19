@@ -1,0 +1,434 @@
+@import url('https://fonts.cdnfonts.com/css/apercu-pro');
+@import url('https://fonts.cdnfonts.com/css/cheltenham-lt');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap');
+
+/*reset*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales*/
+
+html {
+     /* Escala tipografica */
+     font-size: 62.5%;
+
+    /* Familias tipograficas */
+    --font-1: 'Apercu Pro', sans-serif;
+    --font-2: 'Cheltenham LT', sans-serif;
+    --font-3: 'Nunito Sans', sans-serif;
+
+    /* Variables tipograficas */
+    --text-caption: 1.2rem;
+    --text-note: 1.4rem;
+    --text-base: 1.8rem;
+    --text-subheader: 2rem;
+    --text-title: 4rem;
+    --text-headline: 7rem;
+    --text-display: 9rem;
+    --text-jumbo: 14rem;
+
+    /* Paleta de colores */
+
+    --primary-10: #12131a;
+    --primary-9: #1f222f; 
+    --primary-8: #2d3143;
+    --primary-7: #3b4057;
+    --primary-6: #484f6c;
+    --primary-5: #565e80;
+    --primary-4: #646c94;
+    --primary-3: #777fa3;
+    --primary-2: #8b92b1;
+    --primary-1: #9fa5bf;
+
+    --secondary-8: #57ACEA;
+    --secondary-7: #6CB6ED;
+    --secondary-6: #81C1EF;
+    --secondary-5: #96CBF2;
+    --secondary-4: #ABD5F4;
+    --secondary-3: #C0E0F7;
+    --secondary-2: #D5EAFA;
+    --secondary-1: #EAF5FC;
+
+    --contrast-5: #EA9557;
+    --contrast-4: #EDA26C;
+    --contrast-3: #EFB081;
+    --contrast-2: #F2BD96;
+    --contrast-1: #F4CAAB;
+    
+
+    --primary: var(--primary-8);
+
+    --secondary: var(--secondary-5);
+
+    --link: var(--primary-5);
+    --link-hover: var(--secondary-4);
+
+    --contrast: var(--contrast-4);
+}
+
+/* Estilos para el body */
+
+body {
+    font-family: var(--font-3);
+    color: var(--primary);
+
+    background-color: var(--secondary-6);
+}
+
+/* Posicionamiento del navbar con flexbox */
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.linksList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Estilos para la barra de navegacion */
+header {    
+    background-color: var(--contrast-4);
+}
+
+.logo {
+    margin-left: 5rem;
+
+    font-family: var(--font-1);
+    font-size: var(--text-title);
+    color: var(--link);
+
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--link-hover);
+    background-color: var(--secondary-1);
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 1rem 0 0; 
+}
+
+ul li a {
+    font-family: var(--font-2);
+    font-size: var(--text-base);
+    color: var(--link);
+
+    text-decoration: none;
+}
+
+nav img {
+    width: 20px;
+}
+
+nav img:nth-child(1) {
+    margin-right: 1rem;
+}
+
+nav img:nth-child(2) {
+    margin-right: 5rem;
+}
+
+/* Posicionamiento del Carrusel con Bootstrap */
+
+.carrusel {
+    margin-top: 5rem;
+}
+
+/* Estilos para la seccion del carrusel de fotos */
+
+.carrusel img {
+    padding: 5px;
+    height: 500px;
+}
+
+/* Posicionamiento de los productos destacados con flexbox */
+
+.featureProduct {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    margin: 5rem 0;
+}
+
+/* Estilos para los productos destacados */
+
+.featureProduct div img {
+    padding: 5px;
+    height: 350px;
+}
+
+.featureProduct div h2 {
+    font-family: var(--font-2);
+    font-size: var(--text-subheader);
+
+    margin-top: 1rem;
+}
+
+.featureProduct div p {
+    font-family: var(--font-3);
+    font-size: var(--text-base);
+
+    margin-top: 1rem;
+}
+
+/* Estilos del pie de pagina */
+
+footer {
+    background-color: var(--contrast-4);
+}
+
+footer h3 {
+    font-family: var(--font-2);
+    font-size: var(--text-base);
+    font-weight: 300;
+    color: var(--primary);
+
+    text-align: center;
+}
+
+footer p {
+    font-family: var(--font-3);
+    font-size: 1rem;
+    color: var(--primary-6);
+}
+
+footer div a img {
+    width: 15px;
+}
+
+.title {
+    font-family: var(--font-2);
+    font-size: var(--text-title);
+    font-weight: 400;
+
+    text-align: center;
+
+    margin-top: 15px;
+}
+
+
+/* Estilos de las diferentes paginas */
+
+/* Posicionamiento de Agenda */
+
+.agendaItems {
+    margin-top: 100px;
+    margin-left: 150px;
+
+    display: grid;
+
+    grid-template-areas: 
+    "producto1 producto2 producto3"
+    "producto4 producto5 producto6"
+    "producto7 producto8 producto9";
+
+    grid-template-columns: 30% 30% 30%;
+
+    grid-template-rows: repeat(3, 450px);
+}
+
+.product1 {
+    grid-area: producto1;
+}
+
+.product2 {
+    grid-area: producto2;
+}
+
+.product3 {
+    grid-area: producto3;
+}
+
+.product4 {
+    grid-area: producto4;
+}
+
+.product5 {
+    grid-area: producto5;
+}
+
+.product6 {
+    grid-area: producto6;
+}
+
+.product7 {
+    grid-area: producto7;
+}
+
+.product8 {
+    grid-area: producto8;
+}
+
+.product9 {
+    grid-area: producto9;
+}
+
+
+/* Estilos de Agenda */
+
+.agendaItems div img{
+    width: 300px;
+    height: 350px;
+
+    margin: 0 1.7rem 0 1.7rem;
+}
+
+.agendaItems div h2 {
+    font-family: var(--font-2);
+    font-size: var(--text-subheader);
+
+    margin: 0.2rem 1.7rem 0.2rem 1.7rem;
+
+}
+
+.agendaItems div p {
+    font-family: var(--font-3);
+    font-size: var(--text-base);
+
+    margin: 0.2rem 1.7rem 0.2rem 1.7rem;
+}
+
+/* Posicionamiento de la pagina Mugs */
+
+.mugsItems {
+    margin-top: 100px;
+    margin-left: 150px;
+
+    display: grid;
+
+    grid-template-areas: 
+    "producto1 producto2 producto3"
+    "producto4 producto5 producto6"
+    "producto7 producto8 producto9";
+
+    grid-template-columns: 30% 30% 30%;
+
+    grid-template-rows: repeat(3, 450px);
+}
+
+/* Estilos de Mugs */
+
+.mugsItems div img {
+    width: 300px;
+    height: 350px;
+
+    margin: 0 1.7rem 0 1.7rem;
+}
+
+.mugsItems div h2 {
+    font-family: var(--font-2);
+    font-size: var(--text-subheader);
+
+    margin: 0.2rem 1.7rem 0.2rem 1.7rem;
+}
+
+.mugsItems div p {
+    font-family: var(--font-3);
+    font-size: var(--text-base);
+
+    margin: 0.2rem 1.7rem 0.2rem 1.7rem;
+}
+
+/* Posicionamiento de Ropa */
+
+.ropaItems {
+    margin-top: 100px;
+    margin-left: 150px;
+
+    display: grid;
+
+    grid-template-areas: 
+    "producto1 producto2 producto3"
+    "producto4 producto5 producto6"
+    "producto7 producto8 producto9";
+
+    grid-template-columns: 30% 30% 30%;
+
+    grid-template-rows: repeat(3, 450px);
+}
+
+/* Estilos de Ropa */
+
+.ropaItems div img {
+    width: 300px;
+    height: 350px;
+
+    margin: 0 1.7rem 0 1.7rem;
+}
+
+.ropaItems div h2 {
+    font-family: var(--font-2);
+    font-size: var(--text-subheader);
+
+    margin: 0.2rem 1.7rem 0.2rem 1.7rem;
+}
+
+.ropaItems div p {
+    font-family: var(--font-3);
+    font-size: var(--text-base);
+
+    margin: 0.2rem 1.7rem 0.2rem 1.7rem;
+}
+
+/* Posicionamiento de Accesorios */
+
+.accesoryItems {
+    margin-top: 100px;
+    margin-left: 150px;
+
+    display: grid;
+
+    grid-template-areas: 
+    "producto1 producto2 producto3"
+    "producto4 producto5 producto6"
+    "producto7 producto8 producto9";
+
+    grid-template-columns: 30% 30% 30%;
+
+    grid-template-rows: repeat(3, 450px);
+}
+
+/* Estilos de Accesorios */
+
+
+.accesoryItems div img {
+    width: 300px;
+    height: 350px;
+
+    margin: 0 1.7rem 0 1.7rem;
+}
+
+.accesoryItems div h2 {
+    font-family: var(--font-2);
+    font-size: var(--text-subheader);
+
+    margin: 0.2rem 1.7rem 0.2rem 1.7rem;
+}
+
+.accesoryItems div p {
+    font-family: var(--font-3);
+    font-size: var(--text-base);
+
+    margin: 0.2rem 1.7rem 0.2rem 1.7rem;
+}
